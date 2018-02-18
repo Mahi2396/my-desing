@@ -1,0 +1,139 @@
+<div class="map-container">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
+
+    <agm-marker *ngFor="let m of markers; let i = index"  [latitude]="m.lat" [longitude]="m.lng"
+      [label]="m.label" [markerDraggable]="m.draggable">
+
+      <agm-info-window>
+        <strong>InfoWindow content</strong>
+      </agm-info-window>
+
+    </agm-marker>
+
+    <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true" [editable]="true">
+    </agm-circle>
+
+  </agm-map>
+</div>
+
+<div class="container">
+
+  <div class="search-container">
+    <div class="seach-container-title">
+      
+      <h4 class="block-title"> Refine The Result</h4>
+    </div>
+    <div class="search-control-container">
+      
+      <span class="city-dropdown col-md-3 col-sm-6 col-xs-6">
+
+        <div class="select-wrapper">
+          <select class="custom-select hasCustomSelect">
+              
+          </select>
+          <span class="customSelect custom-select">
+              <i class="material-icons">location_on</i>
+
+            <span class="customSelectInner">City</span>
+          </span>
+        </div>
+      </span>
+      <span class="department-dropdown col-md-3 col-sm-6 col-xs-6">
+        <div class="select-wrapper">
+          <select class="custom-select hasCustomSelect">
+            
+          </select>
+          <span class="customSelect custom-select">
+              <i class="material-icons">call_split</i>
+            <span class="customSelectInner">Department</span>
+          </span>
+        </div>
+      </span>
+      <span class="store-dropdown col-md-3 col-sm-6 col-xs-6">
+        <div class="select-wrapper">
+          <select class="custom-select hasCustomSelect">
+          
+          </select>
+          <span class="customSelect custom-select">
+            
+              <i class="material-icons">account_balance</i>
+
+            <span class="customSelectInner">Store</span>
+          </span>
+        </div>
+      </span>
+      <span class="sport-dropdown col-md-3 col-sm-6 col-xs-6">
+        <div class="select-wrapper">
+          <select class="custom-select hasCustomSelect">
+            
+          </select>
+          <span class="customSelect custom-select">
+              <i class="material-icons">games</i>
+            <span class="customSelectInner">Sport</span>
+          </span>
+        </div>
+      </span>
+      <span class="search-button col-md-3 col-sm-6 col-xs-6">
+        <span class="icon-input-btn">
+          <span class="glyphicon glyphicon-search">
+          </span>
+          <input type="submit" class="btn btn-primary btn-md" value="Search">
+        </span>
+      </span>
+     
+    </div>
+  </div>
+
+  <div class="block-container">
+
+    <div class="col-md-4 col-sm-4 col-xs-12 detail-block">
+      <div class=box-section-wrapper>
+        <div class="img-container">
+          <img src="https://avatars1.githubusercontent.com/u/1972313?v=4" style="width:100%; max-height:200px" />
+        </div>
+        <div class="padding_10 block-title border_bottom">MOSCOW</div>
+        <div class="adding_left_right  block-content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+        <div class="adding_left_right contact-numner">
+            TEL.<span class="block-title">7387925384</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12 detail-block">
+      <div class="devider hidden-xs"></div>
+      <div class=box-section-wrapper>
+        <div class="img-container">
+          <img src="https://avatars1.githubusercontent.com/u/1972313?v=4" style="width:100%; max-height:200px" />
+        </div>
+        <div class="padding_10 block-title border_bottom">MOSCOW</div>
+        <div class="adding_left_right block-content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+        <div class="adding_left_right contact-numner">
+            TEL.<span class="block-title">7387925384</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 detail-block">
+      <div class="devider hidden-xs"></div>
+      <div class=box-section-wrapper>
+        <div class="img-container">
+          <img src="https://avatars1.githubusercontent.com/u/1972313?v=4" style="width:100%;max-height:200px" />
+        </div>
+
+        <div class="padding_10 block-title border_bottom">MOSCOW</div>
+        <div class="adding_left_right  block-content">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+        <div class="adding_left_right contact-numner">
+            TEL.<span class="block-title">7387925384</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
