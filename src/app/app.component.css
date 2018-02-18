@@ -59,12 +59,11 @@ agm-map {
     padding:6px;
     align-items: center;
     background: url(../assets/mp-select.png) right top no-repeat; 
-    
     color: #337ab7;
 }
 
 .customSelectInner{
-    width: 80px;
+    width: 70%;
     display: inline-block;
     margin-left: 6px;
     overflow: hidden;
